@@ -21,6 +21,7 @@ function ChocoGame() {
   this.isGoing = true;
   this.currentPlayer = 0;
   this.turnsPlayed = 0;
+  this.waitingForAnswer = true;
 }
 
 ChocoGame.prototype.currentQuestion = function() {

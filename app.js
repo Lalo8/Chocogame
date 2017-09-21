@@ -5,32 +5,55 @@ function updateQuestion() {
     .text(game.currentQuestion().question);
     // $('.choices').hide().delay(3000).fadeIn();
 
-var answersHtml = "" ;
-
-function updateAnswers () {
-  for (var i = 0; i< game.currentQuestion().answers.length;i++) {
-    answersHtml += '<div class="choice">' + '<p>' +game.currentQuestion().answers[i] + '</p>'+ '</div>';
-  }return answersHtml;
-}
-
-answersHtml = updateAnswers();
-$(".answers").html(answersHtml);
-
-var n = game.turnsPlayed + 1
+  var answersHtml = updateAnswers();
+  $(".answers").html(answersHtml);
+  var n = game.turnsPlayed + 1;
 
   $("section#game > .titlequestion > h2").html("Question" + " " + n);
 
-    // game.currentQuestion().answers
-
-
-
+      // game.currentQuestion().answers
+  optionClicked();
 
 
 }
 
+function updateAnswers () {
+  var answersHtml = "" ;
+  for (var i = 0; i< game.currentQuestion().answers.length;i++) {
+    answersHtml += '<div class="choice a'+ i +'clicked" choice="'+ i +'">' + '<p>' +game.currentQuestion().answers[i] + '</p>'+ '</div>';
+  }
+  return answersHtml;
+}
+
 function optionClicked () {
-  $("section#game > .answers > .choices")
-    .text(game.currentQuestion().answers);
+  $(".choice").click(function(event) {
+    $(this).css("background-color", "#913720");
+    var selectedChoice = parseInt($(this).attr('choice'));
+    var isCorrectAnswer = game.play(selectedChoice);
+    updateScore();
+    if (isCorrectAnswer) {
+      $('.question h4').text("Bonne réponse!");
+      // TODO: change the background in green
+    }
+    else {
+      $('.question h4').text("Mauvaise réponse...");
+      // TODO: change the background in red
+    }
+    setTimeout(function() {
+      if (game.isGoing) {
+        updateQuestion();
+      }
+      else {
+        console.log("OVER");
+        // TODO: change the page to show the winner
+      }
+    }, 2000);
+  });
+}
+
+function updateScore() {
+  $(".score1 .number").text(game.players[0].score);
+  $(".score2 .number").text(game.players[1].score);
 
 }
 
