@@ -3,19 +3,15 @@ var quiz = [
   {
     question: 'Quels sont les bienfaits du chocolat ?',
 
-    answers: {
-      a: 'antioxydant',
-      b: 'anti-fatigue',
-      c: 'exitant',
-    },
+    answers: ['antioxydant','anti-fatigue','exitant'],
 
-    correctAnswer: 'a',
+    correctAnswer: 0,
   },
 
   {
     question: "Le chocolat est-il l'allier des femmes enceintes ?",
-    answers: { a: 'oui', b: 'non' },
-    correctAnswer: 'a',
+    answers: ['oui','non'],
+    correctAnswer: 0,
   },
 ];
 
@@ -49,6 +45,9 @@ ChocoGame.prototype.play = function(answerSelected) {
     }
   return good;
 };
+
+
+
 
 ChocoGame.prototype.winner = function() {
   if(this.isGoing) {

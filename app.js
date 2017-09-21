@@ -5,10 +5,20 @@ function updateQuestion() {
     .text(game.currentQuestion().question);
     // $('.choices').hide().delay(3000).fadeIn();
 
-var answersHtml = '';
+var answersHtml = "" ;
 
-$("section#game > .answers").html(answersHtml); //change hemtl qu'il ya auparavant
+function updateAnswers () {
+  for (var i = 0; i< game.currentQuestion().answers.length;i++) {
+    answersHtml += '<div class="choice">' + '<p>' +game.currentQuestion().answers[i] + '</p>'+ '</div>';
+  }return answersHtml;
+}
 
+answersHtml = updateAnswers();
+$(".answers").html(answersHtml);
+
+var n = game.turnsPlayed + 1
+
+  $("section#game > .titlequestion > h2").html("Question" + " " + n);
 
     // game.currentQuestion().answers
 
