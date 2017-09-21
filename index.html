@@ -1,19 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Let's play the Chocogame !</title>
 
-    <link rel="stylesheet" href="style.css">
-    <script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Let's play the Chocogame !</title>
+  <link href="https://fonts.googleapis.com/css?family=Londrina+Solid|Pacifico|Concert+One" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   <script src="chocoGame.js"></script>
-  </head>
-  <body>
+
+</head>
+
+<body>
+  <section id="welcome">
+    <div class="title">
+      <h1>Bienvenue au ChocoGame!</h1>
+      <h3>Connaissez-vous vraiment le chocolat? </h3>
+    </div>
+
+    <div class="image_hp">
+      <img src="images/tablette.png" alt="">
+    </div>
+    <div class="arrow">
+      <i id="downArrow" class="fa fa-arrow-down fa-4x" aria-hidden="true"></i>
+    </div>
+  </section>
+
+  <section id="game">
+    <div class="scores">
+      <div class="score1">
+        <p>Score 1</p>
+        <p class="number">1</p>
+      </div>
+      <div class="score2">
+        <p>Score 2</p>
+        <p class="number">0</p>
+      </div>
+    </div>
+
+    <div class="titlequestion">
+      <h2>Question *n*</h2>
+    </div>
+
+    <div class="question">
+      <h4>*currentQuestion().question*</h4>
+    </div>
+    <div class="answers">
+      //*Faire une boucle qui va rajouter autant de div que d'answers*
+      <div class=" choice clicked">
+        <p>*currentQuestion().answers.a*</p>
+      </div>
+      <div class=" choice clicked">
+        <p>*currentQuestion().answers.b*</p>
+      </div>
+      <div class=" choice clicked">
+        <p>*currentQuestion().answers.c*</p>
+      </div>
+
+      <br>
+    </div>
+    <div class="nextquestion">
+      <i class="fa fa-arrow-right fa-4x" aria-hidden="true"></i>
+    </div>
+  </section>
+
+  <script src="https://use.fontawesome.com/302a13f1f6.js"></script>
+  <script src="app.js"></script>
+</body>
 
 
-    <script src="app.js"></script>
-  </body>
 </html>

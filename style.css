@@ -1,7 +1,6 @@
 body {
   background-color: #EDC723;
 font-family:'Pacifico', cursive;
-  font-weight: lighter;
 
 }
 
@@ -64,7 +63,7 @@ color: white;
 
 }
 
-.choices {
+.choice {
   margin-left: 15px;
   float: left;
   width: 250px;
@@ -81,6 +80,13 @@ font-family:'Concert One',sans-serif;
 font-size: 90px;
 
 }
+.winnerannounce{
+margin-top: 200px;
+background-color:#910036;
+font-family:'Concert One',sans-serif;
+font-size: 90px;
+color: white;
+}
 .wronganswer {
   background-color: #E34741;
 }
@@ -89,10 +95,17 @@ font-size: 90px;
 
 }
 
+.winnername {
+  margin-top: 100px;
+  text-align : center;
+  font-size: 60px;
+  color: #521F1D;
+  font-family:'Concert One',sans-serif;
+}
+
 .score1 {
   float:left;
-  padding-top: 10px;
-    font-size: 30px;
+  font-size: 30px;
     background-color: #521F1D;
     color: #EDC723;
     padding: 10px;
@@ -100,11 +113,11 @@ font-size: 90px;
     height: 160px;
     width: 100px;
     border-radius: 20px;
+    margin-bottom: 10px;
 }
 .score2 {
 
   float: right;
-  padding-top: 10px;
     font-size: 30px;
     background-color: #521F1D;
     color: #EDC723;
@@ -113,18 +126,38 @@ font-size: 90px;
     height: 160px;
     width: 100px;
     border-radius: 20px;
+
 }
 
+.clicked{
+  background-color:#913720;
+}
+.score2 p {
+  margin-bottom: 0px;
+}
+.score1 p {
+  margin-bottom: 0px;
+}
 .scores {
   padding: 50px 150px;
 }
 
 .number {
   margin: 0px;
-  padding-top: 0px;
-  font-size: 45px;
+  padding-bottom: 0px;
+  font-size: 68px;
 }
 .nextquestion {
   float:right;
   margin-right: 100px;
+}
+
+.crown {
+  width: 500px;
+  height :200px;
+  margin: 0px auto;
+}
+
+.crown img {
+  height : 320px;
 }

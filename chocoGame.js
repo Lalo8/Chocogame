@@ -19,7 +19,7 @@ var quiz = [
   },
 ];
 
-function chocoGame() {
+function ChocoGame() {
   this.quiz = quiz;
   this.players = [{ name: 'Joueur1', score: 0 }, { name: 'Joueur2', score: 0 }];
   this.isGoing = true;
@@ -27,11 +27,11 @@ function chocoGame() {
   this.turnsPlayed = 0;
 }
 
-chocoGame.prototype.currentQuestion = function() {
+ChocoGame.prototype.currentQuestion = function() {
   return this.quiz[this.turnsPlayed];
 };
 
-chocoGame.prototype.play = function(answerSelected) {
+ChocoGame.prototype.play = function(answerSelected) {
   if (!this.isGoing) {
     return "error";
   }
@@ -50,7 +50,7 @@ chocoGame.prototype.play = function(answerSelected) {
   return good;
 };
 
-chocoGame.prototype.winner = function() {
+ChocoGame.prototype.winner = function() {
   if(this.isGoing) {
     return null;
   }
