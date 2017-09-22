@@ -7,10 +7,11 @@ font-family:'Pacifico', cursive;
 .title {
  color: #521F1D;
  text-align: center;
-padding-top: 12%;
+padding-top: 8%;
 }
-
-
+.turn {
+  border: 13px solid #4CE6A9;
+}
 .title h1 {
   font-size: 60px;
 }
@@ -60,18 +61,32 @@ color: white;
   width: 67%;
     margin :80px auto;
     padding: 5px auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
 
 }
 
+.regle {
+  font-size: 25px;
+  color: #521F1D;
+  text-align: center;
+ padding-top:;
+}
+
 .choice {
+  margin-top: 10px;
   margin-left: 15px;
-  float: left;
   width: 250px;
   padding: 5px 10px;
   background-color: #521F1D;
   color: white;
   border-radius: 30px;
   font-size: 25px;
+}
+
+.choice > p {
+  pointer-events: none;
 }
 
 
@@ -102,15 +117,22 @@ color: white;
 }
 .goodanswer {
   background-color: #53CB4C;
+  font-family:'Concert One',sans-serif;
+  font-size: 90px;
 
 }
 
 .winnername {
-  margin-top: 100px;
+
+  background-color:#910036;
   text-align : center;
-  font-size: 60px;
-  color: #521F1D;
+  font-size: 50px;
   font-family:'Concert One',sans-serif;
+  border-radius: 30px;
+  color: white;
+  padding: 10px 10px;
+  width: 700px;
+  margin:0px auto;
 }
 
 .score1 {
@@ -149,7 +171,7 @@ color: white;
   margin-bottom: 0px;
 }
 .scores {
-  padding: 50px 150px;
+  padding: 50px 200px;
 }
 
 .number {
@@ -165,9 +187,14 @@ color: white;
 .crown {
   width: 500px;
   height :200px;
-  margin: 0px auto;
+  margin: 200px auto;
+}
+@keyframes blinker {
+50% { opacity: 0; }
 }
 
 .crown img {
   height : 320px;
+  animation: blinker 1s linear infinite;
+
 }

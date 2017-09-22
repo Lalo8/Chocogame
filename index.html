@@ -15,9 +15,18 @@
 <body>
   <section id="welcome">
     <div class="title">
-      <h1>Bienvenue au ChocoGame!</h1>
-      <h3>Connaissez-vous vraiment le chocolat? </h3>
-    </div>
+      <h1>Bienvenue au ChocoGame !</h1>
+      <h3>Connaissez-vous vraiment le chocolat ? </h3>
+      </div>
+
+      <div class="regle">
+       <h4> C'est que nous allons vérifier tout de suite !<h4>
+        <p>Voici les règles :<br>
+        - trouvez-vous un-e adversaire <br>
+        - répondez à une question puis laisser votre adversaire répondre à la suivante <br>
+        - trouvez un maximum de bonnes réponses !<br>
+        </p>
+      </div>
 
     <div class="image_hp">
       <img src="images/tablette.png" alt="">
@@ -25,6 +34,7 @@
     <div class="arrow">
       <i id="downArrow" class="fa fa-arrow-down fa-4x" aria-hidden="true"></i>
     </div>
+
   </section>
 
   <section id="game">
@@ -47,29 +57,28 @@
       <h4>*currentQuestion().question*</h4>
     </div>
     <div class="answers">
-      <div class="submit">
-        It's my last word...
-      </div>
-      //*Faire une boucle qui va rajouter autant de div que d'answers*
-<!--
-      <div class="choice">
-        <p class="a0">*currentQuestion().answers[0]*</p>
-      </div>
-      <div class="choice">
-        <p class="a1">*currentQuestion().answers[1]*</p>
-      </div>
-      <div class="choice">
-        <p class="a2"> *currentQuestion().answers[2]*</p>
-      </div>
--->
-
-      <br>
     </div>
+      <!--
     <div class="nextquestion">
       <i class="fa fa-arrow-right fa-4x" aria-hidden="true"></i>
     </div>
+-->
   </section>
 
+  <section id=winner>
+
+    <div class="winnerannounce question ">
+    <h4>AND THE WINNER IS...</h4>
+    </div>
+    <div class="crown">
+  <img src="images/chocolate_crown.png" alt="chocolate">
+    </div>
+
+  <div class="winnername">
+    </div>
+  </section>
+<audio id="my_audio2" src="generique2.mp3" loop="loop"></audio>
+<audio id="my_audio" src="generique.mp3" loop="loop"></audio>
   <script src="https://use.fontawesome.com/302a13f1f6.js"></script>
   <script src="app.js"></script>
 </body>
