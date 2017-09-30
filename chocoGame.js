@@ -12,7 +12,7 @@ var quiz = [
     correctAnswer: 0,
   },
   {
-    question: "Quel est le minéral principal? ",
+    question: "Quel est le minéral principal du chocolat ? ",
     answers: ['calcium','sodium', 'magnésium'],
     correctAnswer: 2,
   },
@@ -96,7 +96,7 @@ var quiz = [
       },
 
 
-  { question: "Quel est mon chocolat préféré?",
+  { question: "Quel est mon chocolat préféré ?",
     answers: ['72%','50%', "99%"],
     correctAnswer: 0,
   },
