@@ -111,7 +111,7 @@ function startGame() {
 $(document).ready(function() {
   $("#my_audio").get(0).play();
   game = new ChocoGame();
-$("#welcome > .regle").hide().delay(2000).fadeIn(2000);
+$("#welcome > .regle").hide().delay(2000).fadeIn();
   $("#game").hide();
     $("#winner").hide();
   // TODO récupérer le boutton arrow et
